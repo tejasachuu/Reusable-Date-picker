@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import DatePickerInput from "./DatePickerInput";
 import TimePicker from "./TimePicker";
@@ -17,7 +19,7 @@ interface Event {
 
 const DatePicker: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
-  const [eventTitle, setEventTitle] = useState<string>("");
+  const [eventTitle, setEventTitle] = useState<string>(""); // Added state for event title
   const [recurrence, setRecurrence] = useState<RecurrenceOption>("none");
   const [interval, setInterval] = useState<number>(1);
   const [startDate, setStartDate] = useState<string | null>(null);
@@ -130,6 +132,15 @@ const DatePicker: React.FC = () => {
       {recurrence === "weekly" && (
         <DayOfWeekCheckboxes selectedDays={selectedDays} onDayChange={setSelectedDays} />
       )}
+      <div className="mb-4">
+        <label className="block mb-2 text-lg">Event Title</label>
+        <input
+          type="text"
+          value={eventTitle}
+          onChange={(e) => setEventTitle(e.target.value)}
+          className="border border-gray-300 rounded p-3 w-full bg-white text-black"
+        />
+      </div>
       <button
         onClick={addEvent}
         className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded mb-4 mr-2"
