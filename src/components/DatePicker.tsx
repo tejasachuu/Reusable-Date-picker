@@ -81,7 +81,7 @@ const DatePicker: React.FC = () => {
 
     if (recurrence === "weekly" || recurrence === "none") {
       const selectedWeekdays = selectedDays.map((isSelected, index) => (isSelected ? index : -1)).filter(day => day !== -1);
-      for (let i = 0; i < 365; i++) {
+      for (let i = 0; i < 364; i++) {
         const newDate = addDays(baseDate, i);
         if (selectedWeekdays.includes(getDay(newDate)) && isAfter(newDate, start) && isBefore(newDate, end)) {
           addDate(newDate);
