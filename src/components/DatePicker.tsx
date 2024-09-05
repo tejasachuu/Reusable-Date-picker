@@ -129,6 +129,11 @@ const DatePicker: React.FC = () => {
         endDate={endDate}
         onEndDateChange={setEndDate}
       />
+
+{(recurrence === "daily" || recurrence === "weekly" || recurrence === "monthly" || recurrence === "yearly") && (
+        <IntervalInput interval={interval} onIntervalChange={setInterval} />
+      )}
+      
       {recurrence === "weekly" && (
         <DayOfWeekCheckboxes selectedDays={selectedDays} onDayChange={setSelectedDays} />
       )}
