@@ -1,4 +1,3 @@
-// src/app/page.tsx
 import DatePicker from '../components/DatePicker';
 
 export default function Home() {
@@ -9,3 +8,4 @@ export default function Home() {
     </div>
   );
 }
+
