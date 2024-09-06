@@ -1,6 +1,4 @@
-Here’s a detailed `README.md` file for your GitHub repository:
 
-```markdown
 # 📅 Reusable Date Picker with Recurrence Options
 
 Welcome to the **Reusable Date Picker** project! This application is designed to provide users with a powerful event scheduling tool that supports customizable recurring events. Whether you're planning daily, weekly, monthly, or yearly events, this app has got you covered! 🎉
